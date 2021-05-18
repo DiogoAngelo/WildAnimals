@@ -1,0 +1,37 @@
+[data-dropdown] {
+    position: relative;
+}
+[data-dropdown] .dropdown-menu {
+    background: rgb(238, 85, 68, 0.98);
+    border: 1px solid #333;
+    position: absolute;
+    z-index: 200;
+    display: none;
+}
+
+[data-dropdown].ativo .dropdown-menu{
+    display: block;
+    animation: anima-dropdown .3s forwards
+}
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    border-bottom: 10px solid #e54;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.dropdown-menu a:hover {
+    color: #fff;
+}
+@keyframes anima-dropdown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

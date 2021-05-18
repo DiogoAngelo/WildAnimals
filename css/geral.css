@@ -1,0 +1,246 @@
+body, h1, h2, ul, li, p, dd, dt, dl{
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    background: #faf6ed;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+.menu{
+    grid-column: 3 / 5;
+    margin: 2rem 0;
+    background: #fb5;
+}
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 15px 10px;
+    margin-right: 10px;
+    color: #222;
+    text-decoration: none;
+    font-family: monospace;
+    text-transform: bold;
+}
+.grid-section{
+    grid-column: 2 / 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 90px 300px 1fr;
+    grid-gap: 20px;
+    margin-bottom: 4rem;
+}
+.titulo{
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    grid-column: 1 / 4;   
+}
+.animais h2{
+    margin-bottom: 1rem;
+    color: #e54;
+}
+.animais h2::before{
+    content: '';
+    height: 10px;
+    width: 40px;
+    background-color: #fb5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}
+.animais p{
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.animais-lista{
+    height: 370px;
+    overflow-y: scroll;
+    grid-column: 2;
+}
+.animais-lista li{
+    cursor: pointer;
+}
+.animais-descricao{
+    grid-column: 3;
+    height: 370px;
+    overflow-y: scroll;
+}
+.animais-descricao section{
+    margin-bottom: 3rem;
+    display: none;
+}
+.show-right.ativo{
+    display: block;
+    animation: show-right .5s;
+}
+.show-down.ativo{
+    display: block;
+    animation: show-down .5s;
+}
+@keyframes show-right{
+    from{
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0)
+        
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+@keyframes show-down{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -30px, 0)
+        
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+.faq-lista {
+    grid-column: 2 / 4;
+}
+.faq-lista dt{
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color:#e54;
+    cursor: pointer;
+
+}
+.faq-lista dt::before, .dados li::before{
+    content: '';
+    height: 10px;
+    width: 20px;
+    background-color: #fb5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}
+.faq-lista dd {
+    margin-left: 30px;
+    margin-bottom: .5rem;
+    display: none;
+}
+.faq-lista dd.ativo{
+    display: block;
+    animation: accordion 1s;
+}
+@keyframes accordion{
+    from{
+        opacity: 0;
+        max-height: 0;
+    }
+    to{
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+.mapa{
+    grid-column: 2;
+}
+.dados{
+    grid-column: 3;
+}
+.dados li{
+    margin-bottom: 1rem;
+}
+[data-semana]::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+[data-semana].aberto::after {
+    background-color: #3f4;
+}
+.copy{
+    grid-column: 3 / 5;
+    margin-bottom: 2rem;
+    background: #fb5;
+
+}
+.copy p{
+    padding: 20px;
+}
+@media (max-width: 700px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .menu, .grid-section, .copy {
+        grid-column: 1;
+    }
+    .grid-section {
+        grid-template-columns: 100px 1fr;
+        grid-gap: 10px;
+    }
+    .animais-lista {
+        grid-column: 1;
+    }
+    .faq-lista, .dados, .mapa{
+        grid-column: 1 / 3;
+    }
+    .grid-section h1{
+        font-size: 3rem;
+    }
+    .menu{
+        margin-top: 0;
+    }
+    .copy{
+        margin-bottom: 0;
+    }
+}
+.js-scroll{
+    opacity: 0;
+}
+.js-scroll.ativo{
+    animation: mostra .5s forwards; 
+}
+
+@keyframes mostra {
+    from{
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+.btc-preco {
+    background: #e54;
+    color: #fff;
+    padding: .2rem .5rem;
+    margin: 0 6px;
+    font-weight: bold;
+    border-radius: 2px;
+}
