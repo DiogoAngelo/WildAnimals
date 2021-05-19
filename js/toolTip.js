@@ -12,8 +12,8 @@ export default function initToolTip() {
   }
   const onMouseMove = {
     handleEvent(event) {
-      this.tooltipbox.style.top = `${event.pageY + 10} px`;
-      this.tooltipbox.style.left = `${event.pageX + 10} px`;
+      this.tooltipbox.style.top = `${event.pageY + 10  }px`;
+      this.tooltipbox.style.left = `${event.pageX + 10  }px`;
     },
   };
   const deleta = {
