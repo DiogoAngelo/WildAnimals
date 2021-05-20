@@ -1,7 +1,7 @@
 [data-dropdown] {
     position: relative;
 }
-[data-dropdown] .dropdown-menu {
+.js [data-dropdown] .dropdown-menu {
     background: rgb(238, 85, 68, 0.98);
     border: 1px solid #333;
     position: absolute;

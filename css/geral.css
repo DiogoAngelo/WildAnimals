@@ -1,3 +1,4 @@
+
 body, h1, h2, ul, li, p, dd, dt, dl{
     margin: 0px;
     padding: 0px;
@@ -87,10 +88,10 @@ body{
     height: 370px;
     overflow-y: scroll;
 }
-.animais-descricao section{
+/* .js .animais-descricao section{
     margin-bottom: 3rem;
     display: none;
-}
+} */
 .show-right.ativo{
     display: block;
     animation: show-right .5s;
@@ -142,11 +143,11 @@ body{
     margin-right: 10px;
 
 }
-.faq-lista dd {
+/* .js .faq-lista dd {
     margin-left: 30px;
     margin-bottom: .5rem;
     display: none;
-}
+} */
 .faq-lista dd.ativo{
     display: block;
     animation: accordion 1s;
@@ -219,9 +220,9 @@ body{
         margin-bottom: 0;
     }
 }
-.js-scroll{
+/* .js-scroll{
     opacity: 0;
-}
+} */
 .js-scroll.ativo{
     animation: mostra .5s forwards; 
 }
