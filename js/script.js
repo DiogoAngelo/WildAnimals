@@ -1,4 +1,6 @@
-import { principal } from "./mains.js";
+import principal from "./main.js";
+
+
 
 
 principal()

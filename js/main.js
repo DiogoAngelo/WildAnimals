@@ -1,7 +1,11 @@
 export default function principal() {
-    console.log('oi')
+    const imagens = document.querySelectorAll('.animais-lista img');
+    const descricao = document.querySelectorAll('.animais-descricao section');
 
-    // const imagens = document.querySelectorAll('.animais-lista');
-
-    // console.log(imagens)
-}   
+    imagens.forEach((imagem, index) => {
+        imagem.addEventListener('click', () => {
+            // descricao.length.classList.remove('ativo')
+            descricao[index].classList.add('ativo');
+        })
+    })
+}
