@@ -88,15 +88,16 @@ body{
     height: 370px;
     overflow-y: scroll;
 }
+
 .js .animais-descricao section{
     margin-bottom: 3rem;
     display: none;
 }
-.show-right.ativo{
+.js .show-right.ativo{
     display: block;
     animation: show-right .5s;
 }
-.show-down.ativo{
+.js .show-down.ativo{
     display: block;
     animation: show-down .5s;
 }
