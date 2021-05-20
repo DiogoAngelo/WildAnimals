@@ -4,8 +4,10 @@ export default function principal() {
 
     imagens.forEach((imagem, index) => {
         imagem.addEventListener('click', () => {
-            // descricao.length.classList.remove('ativo')
-            descricao[index].classList.add('ativo');
+            descricao.forEach((item) => {
+                item.classList.remove('ativo')
+            })
+            descricao[index].classList.add('ativo', );
         })
     })
 }
