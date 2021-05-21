@@ -8,8 +8,11 @@ export default function initAnimaScroll() {
     function mostraBloco() {
         blocos.forEach((bloco) => {
             const altura = bloco.getBoundingClientRect().top;
+
             if(altura < alturaTela) {
-                bloco.classList.add('ativo');
+                if(!bloco.classList.contains('ativo')){
+                    bloco.classList.add('ativo');
+                }
             }
         });
     }
