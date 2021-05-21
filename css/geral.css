@@ -221,9 +221,9 @@ body{
         margin-bottom: 0;
     }
 }
-/* .js-scroll{
+.js-scroll{
     opacity: 0;
-} */
+}
 .js-scroll.ativo{
     animation: mostra .5s forwards; 
 }
