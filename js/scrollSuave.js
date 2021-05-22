@@ -1,11 +1,10 @@
 export default function initScrollSuave() {
-
     const menuLinks = document.querySelectorAll('[data-menu="list"] li');
 
     function suave(event) {
         event.preventDefault();
-        const li = event.target.href;
-        console.log(li)
+        const menuLink = event.target;
+        console.log(menuLink)
     }
 
     menuLinks.forEach((link) => { 
