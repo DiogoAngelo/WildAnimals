@@ -3,8 +3,15 @@ export default function initScrollSuave() {
 
     function suave(event) {
         event.preventDefault();
-        const menuLink = event.target;
-        console.log(menuLink)
+        const href = event.target.getAttribute("href");
+        const select = document.querySelector(href)
+        
+        select.scrollIntoView {
+            behavior: {
+                smooth,
+            }
+        }
+        
     }
 
     menuLinks.forEach((link) => { 
