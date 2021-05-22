@@ -1,21 +1,22 @@
-export default function principal() {
-    const imagens = document.querySelectorAll('.animais-lista img');
-    const descricao = document.querySelectorAll('.animais-descricao section');
+export default function initMain() {
+    const imgs = document.querySelectorAll('[data-tab="lista"] li');
+    const sections = document.querySelectorAll('[data-tab="content"] section');
 
-    descricao[0].classList.add('ativo', 'show-right')
+    sections[0].classList.add('ativo', 'show-right');
 
-    function openDescription(index) {
+    function mostraDescricao(index) {
 
-        descricao.forEach((item) => {
-            item.classList.remove('ativo');
-        })
-
-        const direcao = descricao[index].dataset.anime;
-        descricao[index].classList.add('ativo', direcao);
-    }
-    imagens.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            openDescription(index);
+        sections.forEach((section) => {
+            section.classList.remove('ativo');
         });
-    });
+
+        const direction = sections[index].dataset.anime;
+        sections[index].classList.add('ativo', direction);
+    }
+
+    imgs.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            mostraDescricao(index)
+        });
+    })
 }
