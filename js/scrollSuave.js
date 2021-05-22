@@ -1,5 +1,5 @@
 export default function initScrollSuave() {
-    const menuLinks = document.querySelectorAll('[data-menu="list"] li');
+    const menuLinks = document.querySelectorAll('a[href^="#"]');
 
     function suave(event) {
         event.preventDefault();
@@ -10,7 +10,6 @@ export default function initScrollSuave() {
             behavior: "smooth",
         }); 
     }
-
     menuLinks.forEach((link) => { 
         link.addEventListener('click', suave);
     });
