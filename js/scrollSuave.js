@@ -6,12 +6,9 @@ export default function initScrollSuave() {
         const href = event.target.getAttribute("href");
         const select = document.querySelector(href)
         
-        select.scrollIntoView {
-            behavior: {
-                smooth,
-            }
-        }
-        
+        select.scrollIntoView({
+            behavior: "smooth",
+        }); 
     }
 
     menuLinks.forEach((link) => { 
