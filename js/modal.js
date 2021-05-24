@@ -3,20 +3,17 @@ export default function initModal() {
     const fechar = document.querySelector('[data-modal="fechar"]');
     const login = document.querySelector('[data-modal="abrir"]');
 
-    function abreModal(event) {
+    function toggleModal(event) {
         event.preventDefault();
-        modalBox.classList.add('ativo');
-    }
-    function fechaModal() {
-        modalBox.classList.remove('ativo');
-    }
-    function clicaFora(event) {
-        if(this === event.target) {
-            fechaModal();
-        }
+        modalBox.classList.toggle('ativo');
     }
 
+    function clicaFora(event) {
+        if(this === event.target) {
+            toggleModal();
+        }
+    }
     modalBox.addEventListener('click', clicaFora);
-    fechar.addEventListener('click', fechaModal);
-    login.addEventListener('click', abreModal);
+    fechar.addEventListener('click', toggleModal);
+    login.addEventListener('click', toggleModal);
 }
