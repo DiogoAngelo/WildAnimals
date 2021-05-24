@@ -144,11 +144,11 @@ body{
     margin-right: 10px;
 
 }
-/* .js .faq-lista dd {
+.js .faq-lista dd {
     margin-left: 30px;
     margin-bottom: .5rem;
     display: none;
-} */
+}
 .faq-lista dd.ativo{
     display: block;
     animation: accordion 1s;
@@ -221,9 +221,9 @@ body{
         margin-bottom: 0;
     }
 }
-/* .js-scroll{
+.js-scroll{
     opacity: 0;
-} */
+}
 .js-scroll.ativo{
     animation: mostra .5s forwards; 
 }

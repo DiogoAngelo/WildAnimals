@@ -4,21 +4,17 @@ export default function initMain() {
 
     descripts[0].classList.add('ativo', 'show-right')
 
-
     function openDescription(index) {
         descripts.forEach((item) => {
             item.classList.remove('ativo');
         });
-        const direcao = document.dataset.anime;
-        descripts[index].classList.add('ativo', direcao)
-
-    
+        const direcao = descripts[index].dataset.anime;
+        descripts[index].classList.add('ativo', direcao);
     }
 
     imgs.forEach((img, index) => {
         img.addEventListener('click', () => {
             openDescription(index)
         });
-    })
-
+    });
 }
