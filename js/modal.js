@@ -10,7 +10,7 @@ export default function initModal() {
 
     function clicaFora(event) {
         if(this === event.target) {
-            toggleModal();
+            toggleModal(event);
         }
     }
     modalBox.addEventListener('click', clicaFora);
