@@ -6,6 +6,9 @@ export default function dropdown() {
   function openDropDown(event) {
     event.preventDefault();
     this.classList.add("ativo");
+    outterClick(this, ["click", "touchstart"], () => {
+        this.classList.remove("ativo");
+      });
   }
   ["click", "touchstart"].forEach((userEvent) => {
     menus.forEach((menu) => {
