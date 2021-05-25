@@ -1,22 +1,30 @@
 export default function initDropDown() {
-    const sobre = document.querySelector('[data-dropdown]');
+    const menu = document.querySelector("[data-dropdown]");
 
-    function mostraDrop(event) {
+    menu.addEventListener('click', openDropDown);
+
+    function openDropDown(event) {
         event.preventDefault();
-        sobre.classList.add('ativo');
-        console.log('primeiro')
+        this.classList.add('ativo');
+        outsideClick(this, () => {
+            this.classList.remove('ativo');
+        });
     }
-    function fechaMenu() {
-        setTimeout(() => {
-            // console.log('aoisdaoidoasi');
-            sobre.classList.remove('ativo')
+    function outsideClick(element, callback) {
+        const html = document.documentElement;
 
+        if(!element.hasAttribute('data-outside')) {
+            html.addEventListener('click', handleOutsideClick);
+        }
+        element.setAttribute('data-outside', ' ');
 
-            
-        }, 1000);
+        function handleOutsideClick(event) {
+            if(!element.contains(event.target)) {
+                html.removeEventListener('click', handleOutsideClick);
+                element.removeAttribute('data-outside');
+
+                callback();
+            }
+        }
     }
-
-    window.addEventListener('click', fechaMenu);
-    sobre.addEventListener('click', mostraDrop);
-
 }
