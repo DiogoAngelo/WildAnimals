@@ -8,7 +8,9 @@ export default function initAnimaScroll() {
             const altura = bloco.getBoundingClientRect().top;
 
             if(altura <= alturaTela) {
-                bloco.classList.add('ativo');
+                if(!bloco.classList.contains('ativo')) {
+                    bloco.classList.add('ativo');
+                }
             }
         });
     }

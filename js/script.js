@@ -5,6 +5,7 @@ import initScrollSuave from "./scrollSuave.js";
 import initModal from "./modal.js";
 import initDropDown from "./dropdownMenu.js";
 import initMenuMobile from "./menu-mobile.js";
+import initAnimaNumeros from "./anima-numeros.js";
 
 initMain();
 initAccordion();
@@ -13,3 +14,4 @@ initScrollSuave();
 initModal();
 initDropDown();
 initMenuMobile();
+initAnimaNumeros();
