@@ -3,23 +3,29 @@ export default class Modal {
         this.modalBox = document.querySelector(modalBox);
         this.fechar = document.querySelector(close);
         this.login = document.querySelector(open);
+        this.eventToggleModal = this.eventToggleModal.bind(this);
+        this.clicaFora = this.clicaFora.bind(this)
     }
 
-    toggleModal(event) {
-        event.preventDefault();
+    toggleModal() {
         this.modalBox.classList.toggle('ativo');
     }
 
+    eventToggleModal(event) {
+        event.preventDefault();
+        this.toggleModal()
+    }
+
     clicaFora(event) {
-        if(this === event.target) {
+        if(event.target === this.modalBox) {
             this.toggleModal(event);
         }
     }
 
     addEventModal() {
-        this.modalBox.addEventListener('click', (event) => this.clicaFora(event));
-        this.fechar.addEventListener('click', (event) =>  this.toggleModal(event));
-        this.login.addEventListener('click', (event) => this.toggleModal(event));
+        this.modalBox.addEventListener('click',this.clicaFora);
+        this.fechar.addEventListener('click', this.eventToggleModal);
+        this.login.addEventListener('click', this.eventToggleModal);
     }
 
     init() {

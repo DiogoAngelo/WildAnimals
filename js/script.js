@@ -19,8 +19,6 @@ tabNav.init();
 const modal = new Modal('[data-modal="container"]','[data-modal="fechar"]', '[data-modal="abrir"]')
 modal.init();
 
-
-
 initAnimaScroll();
 initDropDown();
 initMenuMobile();
