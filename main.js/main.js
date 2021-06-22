@@ -60,16 +60,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./js/main.js":
-/*!********************!*\
-  !*** ./js/main.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMain)\n/* harmony export */ });\nfunction initMain() {\n    const imgs = document.querySelectorAll('[data-tab=\"lista\"] li');\n    const descripts = document.querySelectorAll('[data-tab=\"content\"] section');\n\n    descripts[0].classList.add('ativo', 'show-right')\n\n    function openDescription(index) {\n        descripts.forEach((item) => {\n            item.classList.remove('ativo');\n        });\n        const direcao = descripts[index].dataset.anime;\n        descripts[index].classList.add('ativo', direcao);\n    }\n\n    imgs.forEach((img, index) => {\n        img.addEventListener('click', () => {\n            openDescription(index)\n        });\n    });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/main.js?");
-
-/***/ }),
-
 /***/ "./js/menu-mobile.js":
 /*!***************************!*\
   !*** ./js/menu-mobile.js ***!
@@ -96,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scrollSuave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scrollSuave.js */ \"./js/scrollSuave.js\");\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.js */ \"./js/main.js\");\n/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accordion.js */ \"./js/accordion.js\");\n/* harmony import */ var _animaScroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animaScroll.js */ \"./js/animaScroll.js\");\n/* harmony import */ var _modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal.js */ \"./js/modal.js\");\n/* harmony import */ var _dropdownMenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dropdownMenu.js */ \"./js/dropdownMenu.js\");\n/* harmony import */ var _menu_mobile_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./menu-mobile.js */ \"./js/menu-mobile.js\");\n/* harmony import */ var _anima_numeros_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./anima-numeros.js */ \"./js/anima-numeros.js\");\n\n\n\n\n\n\n\n\n\nconst scrollSuave = new _scrollSuave_js__WEBPACK_IMPORTED_MODULE_0__.default('a[href^=\"#\"]');\nscrollSuave.init();\n\nconst accordion = new _accordion_js__WEBPACK_IMPORTED_MODULE_2__.default('[data-anime=\"accordion\"] dt');\naccordion.init();\n\n\n(0,_main_js__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_animaScroll_js__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modal_js__WEBPACK_IMPORTED_MODULE_4__.default)();\n(0,_dropdownMenu_js__WEBPACK_IMPORTED_MODULE_5__.default)();\n(0,_menu_mobile_js__WEBPACK_IMPORTED_MODULE_6__.default)();\n(0,_anima_numeros_js__WEBPACK_IMPORTED_MODULE_7__.default)();\n\n//# sourceURL=webpack://animais-fantasticos/./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scrollSuave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scrollSuave.js */ \"./js/scrollSuave.js\");\n/* harmony import */ var _tabNav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabNav.js */ \"./js/tabNav.js\");\n/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accordion.js */ \"./js/accordion.js\");\n/* harmony import */ var _animaScroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animaScroll.js */ \"./js/animaScroll.js\");\n/* harmony import */ var _modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal.js */ \"./js/modal.js\");\n/* harmony import */ var _dropdownMenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dropdownMenu.js */ \"./js/dropdownMenu.js\");\n/* harmony import */ var _menu_mobile_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./menu-mobile.js */ \"./js/menu-mobile.js\");\n/* harmony import */ var _anima_numeros_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./anima-numeros.js */ \"./js/anima-numeros.js\");\n\n\n\n\n\n\n\n\n\nconst scrollSuave = new _scrollSuave_js__WEBPACK_IMPORTED_MODULE_0__.default('a[href^=\"#\"]');\nscrollSuave.init();\n\nconst accordion = new _accordion_js__WEBPACK_IMPORTED_MODULE_2__.default('[data-anime=\"accordion\"] dt');\naccordion.init();\n\nconst tabNav = new _tabNav_js__WEBPACK_IMPORTED_MODULE_1__.default('[data-tab=\"lista\"] li', '[data-tab=\"content\"] section')\ntabNav.init();\n\n(0,_animaScroll_js__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modal_js__WEBPACK_IMPORTED_MODULE_4__.default)();\n(0,_dropdownMenu_js__WEBPACK_IMPORTED_MODULE_5__.default)();\n(0,_menu_mobile_js__WEBPACK_IMPORTED_MODULE_6__.default)();\n(0,_anima_numeros_js__WEBPACK_IMPORTED_MODULE_7__.default)();\n\n//# sourceURL=webpack://animais-fantasticos/./js/script.js?");
 
 /***/ }),
 
@@ -107,6 +97,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ScrollSuave)\n/* harmony export */ });\nclass ScrollSuave {\n    constructor(links, options) {\n        this.linksInternos = document.querySelectorAll(links);\n        if (options === undefined) {\n            this.options = { behavior: \"smooth\", block: \"start\"}\n        }else {\n            this.options = options;\n        }\n        this.scrollSuave = this.scrollSuave.bind(this);\n    }\n\n    scrollSuave(event) {\n        event.preventDefault();\n        const href = event.target.getAttribute(\"href\");\n        const select = document.querySelector(href);\n        select.scrollIntoView(this.options);\n    }\n\n    addLinkEvent() {\n        this.linksInternos.forEach((link) => {\n            link.addEventListener('click', this.scrollSuave);\n        });\n    }\n\n    init() {\n        if (this.linksInternos.length) {\n            this.addLinkEvent();\n        }\n        return this;\n    }\n}\n\n\n//# sourceURL=webpack://animais-fantasticos/./js/scrollSuave.js?");
+
+/***/ }),
+
+/***/ "./js/tabNav.js":
+/*!**********************!*\
+  !*** ./js/tabNav.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ TabNav)\n/* harmony export */ });\nclass TabNav {\n    constructor(img, description) {\n        this.imgs = document.querySelectorAll(img);\n        this.descripts = document.querySelectorAll(description);\n    }\n\n    openDescription(index) {\n        this.descripts.forEach((item) => {\n            item.classList.remove('ativo');\n        });\n        const direcao = this.descripts[index].dataset.anime;\n        this.descripts[index].classList.add('ativo', direcao);\n    }\n\n    addEvent() {\n        this.imgs.forEach((img, index) => {\n            img.addEventListener('click', () => {\n                this.openDescription(index)\n            });\n        });\n    }\n\n    init() {\n        this.openDescription(0);\n        this.addEvent();\n    }\n}\n\n\n\n//# sourceURL=webpack://animais-fantasticos/./js/tabNav.js?");
 
 /***/ })
 
