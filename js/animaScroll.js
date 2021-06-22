@@ -6,7 +6,6 @@ export default function initAnimaScroll() {
     function mostraBloco() {
         blocos.forEach((bloco) => {
             const altura = bloco.getBoundingClientRect().top;
-            console.log(altura);
 
             if(altura <= alturaTela) {
                 if(!bloco.classList.contains('ativo')) {
