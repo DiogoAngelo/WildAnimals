@@ -29,6 +29,9 @@ export default class Modal {
     }
 
     init() {
-        this.addEventModal();
+        if (this.modalBox && this.fechar && this.login) {
+            this.addEventModal();
+        }
+        return this;
     }
 }

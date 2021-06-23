@@ -21,8 +21,12 @@ export default class TabNav {
     }
 
     init() {
-        this.openDescription(0);
-        this.addEvent();
+        if (this.imgs.length && this.descripts.length) {
+            this.openDescription(0);
+            this.addEvent();
+        }
+        return this;
+
     }
 }
 
