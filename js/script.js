@@ -6,7 +6,7 @@ import Modal from "./modal.js";
 import Tooltip from "./toolTip.js";
 import initDropDown from "./dropdownMenu.js";
 import initMenuMobile from "./menu-mobile.js";
-import initAnimaNumeros from "./anima-numeros.js";
+import AnimaNumeros from "./anima-numeros.js";
 
 const scrollSuave = new ScrollSuave('a[href^="#"]');
 scrollSuave.init();
@@ -23,7 +23,9 @@ modal.init();
 const toolTip = new Tooltip('[data-tooltip')
 toolTip.init();
 
+const animaNumeros = new AnimaNumeros('[data-numero]', 'ativo', '.numeros');
+animaNumeros.init();
+
 initAnimaScroll();
 initDropDown();
 initMenuMobile();
-initAnimaNumeros();
