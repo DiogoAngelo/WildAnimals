@@ -3,6 +3,7 @@ import TabNav from "./tabNav.js";
 import Accordion from "./accordion.js";
 import initAnimaScroll from "./animaScroll.js";
 import Modal from "./modal.js";
+import Tooltip from "./toolTip.js";
 import initDropDown from "./dropdownMenu.js";
 import initMenuMobile from "./menu-mobile.js";
 import initAnimaNumeros from "./anima-numeros.js";
@@ -18,6 +19,9 @@ tabNav.init();
 
 const modal = new Modal('[data-modal="container"]','[data-modal="fechar"]', '[data-modal="abrir"]')
 modal.init();
+
+const toolTip = new Tooltip('[data-tooltip')
+toolTip.init();
 
 initAnimaScroll();
 initDropDown();
