@@ -3,16 +3,16 @@ import outsideClick from "./click-outside.js";
 export default class DropDown {
     constructor(link) {
         this.menu = document.querySelector(link);
+        this.activeClass = 'ativo'
         this.openDropDown = this.openDropDown.bind(this);
-
     }
 
     openDropDown(event) {
         event.preventDefault();
-        event.target.classList.add('ativo');
-        outsideClick(this, () => {
-            console.log(this);
-            event.target.classList.remove('ativo');
+        const element = event.currentTarget;
+        element.classList.add(this.activeClass);
+        outsideClick(element, () => {
+            element.classList.remove(this.activeClass);
         });
     }
 
@@ -21,7 +21,9 @@ export default class DropDown {
     }
 
     init() {
-        this.addEvent();
+        if (this.menu) {
+            this.addEvent();
+        }
         return this;
     }
 }
