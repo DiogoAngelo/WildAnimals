@@ -7,6 +7,7 @@ import Tooltip from "./toolTip.js";
 import initDropDown from "./dropdownMenu.js";
 import initMenuMobile from "./menu-mobile.js";
 import AnimaNumeros from "./anima-numeros.js";
+import FetchBitcoin from "./fetch-bitcoin.js";
 
 const scrollSuave = new ScrollSuave('a[href^="#"]');
 scrollSuave.init();
@@ -25,6 +26,9 @@ toolTip.init();
 
 const animaNumeros = new AnimaNumeros('[data-numero]', 'ativo', '.numeros');
 animaNumeros.init();
+
+const fetchBitcoin = new FetchBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
+fetchBitcoin.init();
 
 initAnimaScroll();
 initDropDown();
