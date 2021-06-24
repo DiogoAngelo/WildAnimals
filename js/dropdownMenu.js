@@ -1,14 +1,27 @@
 import outsideClick from "./click-outside.js";
 
-export default function initDropDown() {
-    const menu = document.querySelector("[data-dropdown]");
+export default class DropDown {
+    constructor(link) {
+        this.menu = document.querySelector(link);
+        this.openDropDown = this.openDropDown.bind(this);
 
-    function openDropDown(event) {
+    }
+
+    openDropDown(event) {
         event.preventDefault();
-        this.classList.add('ativo');
+        event.target.classList.add('ativo');
         outsideClick(this, () => {
-            this.classList.remove('ativo');
+            console.log(this);
+            event.target.classList.remove('ativo');
         });
     }
-    menu.addEventListener('click', openDropDown);
+
+    addEvent() {
+        this.menu.addEventListener('click', this.openDropDown);
+    }
+
+    init() {
+        this.addEvent();
+        return this;
+    }
 }

@@ -8,6 +8,7 @@ import initDropDown from "./dropdownMenu.js";
 import initMenuMobile from "./menu-mobile.js";
 import AnimaNumeros from "./anima-numeros.js";
 import FetchBitcoin from "./fetch-bitcoin.js";
+import DropDown from "./dropdownMenu.js";
 
 const scrollSuave = new ScrollSuave('a[href^="#"]');
 scrollSuave.init();
@@ -33,5 +34,7 @@ fetchBitcoin.init();
 const animaScroll = new AnimaScroll('[data-anima="scroll"]');
 animaScroll.init();
 
-initDropDown();
+const dropDown = new DropDown('[data-dropdown]');
+dropDown.init();
+
 initMenuMobile();
