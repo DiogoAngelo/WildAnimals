@@ -1,18 +1,27 @@
-export default function initAnimaScroll() {
-    const blocos = document.querySelectorAll('[data-anima="scroll"]');
+export default class AnimaScroll {
+    constructor(bloco) {
+        this.blocos = document.querySelectorAll(bloco);
+        this.alturaTela = window.innerHeight * .6;
+        this.mostraBloco = this.mostraBloco.bind(this);
+    }
 
-    const alturaTela = window.innerHeight * .6;
-    blocos[0].classList.add('ativo')
-    function mostraBloco() {
-        blocos.forEach((bloco) => {
+    mostraBloco() {
+        this.blocos.forEach((bloco) => {
             const altura = bloco.getBoundingClientRect().top;
-
-            if(altura <= alturaTela) {
+            if(altura <= this.alturaTela) {
                 if(!bloco.classList.contains('ativo')) {
                     bloco.classList.add('ativo');
                 }
             }
         });
     }
-    window.addEventListener('scroll', mostraBloco);
+
+    adicionaEvento() {
+        window.addEventListener('scroll', this.mostraBloco);
+    }
+
+    init() {
+        this.blocos[0].classList.add('ativo');
+        this.adicionaEvento();
+    }
 }
