@@ -1,7 +1,6 @@
 export default class Tolltip {
     constructor(tooltips) {
         this.tooltips = document.querySelectorAll(tooltips);
-
         this.onMouseOver = this.onMouseOver.bind(this);
         this.onMouseMove = this.onMouseMove.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
@@ -15,7 +14,6 @@ export default class Tolltip {
 
         }else {
             this.tooltipBox.style.left = `${event.pageX + 20}px`;   
-
         }
     }
     
