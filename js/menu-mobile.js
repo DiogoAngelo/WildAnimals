@@ -14,5 +14,4 @@ export default function initMenuMobile() {
         });
     }
     botao.addEventListener('click', openMenu);
-
 }
