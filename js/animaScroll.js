@@ -23,5 +23,6 @@ export default class AnimaScroll {
     init() {
         this.blocos[0].classList.add('ativo');
         this.adicionaEvento();
+        return this;
     }
 }

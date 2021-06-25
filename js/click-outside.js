@@ -14,6 +14,4 @@ export default function outsideClick(element, callback) {
         })
     }
     element.setAttribute('data-outside', ' ');
-
-
 }
