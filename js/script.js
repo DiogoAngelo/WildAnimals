@@ -8,6 +8,11 @@ import AnimaNumeros from "./anima-numeros.js";
 import FetchBitcoin from "./fetch-bitcoin.js";
 import DropDown from "./dropdownMenu.js";
 import MenuMobile from "./menu-mobile.js";
+import initFuncionamento from "./funcionamento.js";
+
+initFuncionamento()
+
+
 
 const scrollSuave = new ScrollSuave('a[href^="#"]');
 scrollSuave.init();
