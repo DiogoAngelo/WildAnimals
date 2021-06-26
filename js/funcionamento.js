@@ -1,23 +1,38 @@
 export default class Funcionamento {
-    constructor() {
-        this.funcionamento = document.querySelector('[data-semana]');
-        this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
-        this.horarioSemana = this.funcionamento.dataset.horario.split(',').map(Number);
-        this.dataAgora = new Date();
-        this.diaAgora = this.dataAgora.getDay();
-        this.horarioAgora = this.dataAgora.getHours();
-        this.semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
-        this.horarioAberto = (this.horarioAgora >= this.horarioSemana[0] && this.horarioAgora < this.horarioSemana[1]);
+    constructor(element) {
+        this.funcionamento = document.querySelector(element);
     }
 
-    addClass() {
-        if (this.semanaAberto && this.horarioAberto) {
+    dadosFuncionamento() {
+        this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
+        this.horarioSemana = this.funcionamento.dataset.horario.split(',').map(Number);
+    }
+
+    dadosAgora() {
+        this.dataAgora = new Date();
+        this.diaAgora = this.dataAgora.getDay();
+        this.horarioAgora = this.dataAgora.getUTCHours() - 3;
+    }
+
+    estaAberto() {
+        const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
+        const horarioAberto = (this.horarioAgora >= this.horarioSemana[0] && this.horarioAgora < this.horarioSemana[1]);
+
+        return semanaAberto && horarioAberto;
+    }
+
+    ativaAberto() {
+        if (this.estaAberto()) {
             this.funcionamento.classList.add('aberto');
         }
     }
 
     init() {
-        this.addClass();
+        if (this.funcionamento) {
+            this.dadosFuncionamento();
+            this.dadosAgora();
+            this.ativaAberto();
+        }
         return this;
     }
 }
