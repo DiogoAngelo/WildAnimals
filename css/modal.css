@@ -15,7 +15,8 @@
     display: flex;
 }
 .modal {
-    min-width: 300px;
+    width: 50vw;
+    max-width: 600px;
     background: white;
     padding: 40px;
     position: relative;
@@ -69,4 +70,7 @@ button[type="submit"]{
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+}
+@media(max-width: 700px) {
+
 }
