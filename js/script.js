@@ -9,6 +9,7 @@ import FetchBitcoin from "./fetch-bitcoin.js";
 import DropDown from "./dropdownMenu.js";
 import MenuMobile from "./menu-mobile.js";
 import Funcionamento from "./funcionamento.js";
+import  SlideNav from "./slide.js";
 
 const scrollSuave = new ScrollSuave('a[href^="#"]');
 scrollSuave.init();
@@ -42,3 +43,8 @@ menuMobile.init();
 
 const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+
+slide.addControl('.custom-controls');
